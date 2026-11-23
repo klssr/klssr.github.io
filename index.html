@@ -1,0 +1,1423 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>印象足拍45期_影像社区与精品内容平台 - 官方品牌门户</title>
+<meta name="description" content="印象足拍45期官方网站，国内深耕街拍与人文影像的品牌视频社区，汇聚原创高清内容、创作者矩阵与企业动态，持续运营值得信赖的影像内容生态。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231b2b2f'/%3E%3Ccircle cx='32' cy='32' r='16' fill='none' stroke='%23ffb454' stroke-width='4'/%3E%3Ccircle cx='32' cy='32' r='6' fill='%23ffb454'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --ypf-ink:#1b2b2f;
+    --ypf-ink-soft:#39504f;
+    --ypf-night:#12201f;
+    --ypf-paper:#f6f2ea;
+    --ypf-card:#fffdf8;
+    --ypf-amber:#e79a3b;
+    --ypf-amber-deep:#c97b1e;
+    --ypf-mint:#2f7d6e;
+    --ypf-line:#e2d9c8;
+    --ypf-shadow:0 14px 34px rgba(27,43,47,.10);
+    --ypf-radius:18px;
+    --ypf-maxw:1180px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif;
+    background:var(--ypf-paper);
+    color:var(--ypf-ink);
+    line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block;}
+  a{color:inherit;text-decoration:none;}
+  button{font-family:inherit;cursor:pointer;}
+  .ypf-wrap{width:min(var(--ypf-maxw),100% - 40px);margin-inline:auto;}
+  .ypf-skip{position:absolute;left:-9999px;top:0;}
+  .ypf-skip:focus{left:12px;top:12px;background:#fff;padding:10px 16px;border-radius:8px;z-index:200;}
+
+  /* ============ 吸顶公告 + 页头 ============ */
+  .ypf-sticktop{position:sticky;top:0;z-index:90;}
+  .ypf-notice{
+    background:linear-gradient(90deg,#12201f,#27423d 60%,#12201f);
+    color:#f3e9d4;font-size:.86rem;
+    border-bottom:1px solid rgba(255,255,255,.08);
+  }
+  .ypf-notice-inner{display:flex;align-items:center;gap:12px;padding:9px 0;flex-wrap:wrap;}
+  .ypf-notice-tag{
+    flex:none;background:var(--ypf-amber);color:#231a0c;font-weight:700;
+    font-size:.75rem;letter-spacing:.06em;padding:2px 9px;border-radius:999px;
+  }
+  .ypf-notice p{margin:0;flex:1 1 300px;min-width:0;}
+  .ypf-notice a{color:#ffce85;font-weight:600;white-space:nowrap;}
+  .ypf-notice a:hover{text-decoration:underline;}
+
+  .ypf-header{
+    background:rgba(246,242,234,.94);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--ypf-line);
+  }
+  .ypf-header-inner{display:flex;align-items:center;gap:18px;padding:12px 0;flex-wrap:wrap;}
+  .ypf-brand{display:flex;align-items:center;gap:11px;flex:none;}
+  .ypf-brand-mark{
+    width:44px;height:44px;border-radius:13px;flex:none;
+    background:radial-gradient(circle at 32% 28%,#ffd198,#e79a3b 55%,#b3651a);
+    display:grid;place-items:center;box-shadow:0 6px 16px rgba(201,123,30,.32);
+  }
+  .ypf-brand-mark span{font-weight:800;color:#221605;font-size:1.02rem;letter-spacing:.02em;}
+  .ypf-brand-text b{display:block;font-size:1.06rem;letter-spacing:.03em;line-height:1.3;}
+  .ypf-brand-text small{display:block;font-size:.7rem;color:var(--ypf-ink-soft);letter-spacing:.14em;text-transform:uppercase;}
+  .ypf-nav{margin-left:auto;}
+  .ypf-nav ul{display:flex;gap:4px;list-style:none;margin:0;padding:0;flex-wrap:wrap;}
+  .ypf-nav a{
+    display:block;padding:8px 12px;border-radius:999px;font-size:.92rem;
+    color:var(--ypf-ink-soft);transition:.2s;white-space:nowrap;
+  }
+  .ypf-nav a:hover,.ypf-nav a:focus-visible{background:#efe6d5;color:var(--ypf-ink);}
+  .ypf-header-tools{display:flex;align-items:center;gap:10px;}
+  .ypf-search{
+    display:flex;align-items:center;gap:6px;background:var(--ypf-card);
+    border:1px solid var(--ypf-line);border-radius:999px;padding:5px 6px 5px 14px;
+  }
+  .ypf-search input{
+    border:0;background:transparent;outline:none;font-size:.9rem;width:150px;color:var(--ypf-ink);
+  }
+  .ypf-search button{
+    border:0;border-radius:999px;background:var(--ypf-ink);color:#fff;
+    font-size:.82rem;padding:6px 14px;transition:.2s;
+  }
+  .ypf-search button:hover{background:var(--ypf-mint);}
+  .ypf-burger{
+    display:none;border:1px solid var(--ypf-line);background:var(--ypf-card);
+    border-radius:10px;width:42px;height:40px;font-size:1.05rem;color:var(--ypf-ink);
+  }
+  .ypf-search-hint{
+    margin:6px 0 0;font-size:.8rem;color:var(--ypf-amber-deep);min-height:1.2em;flex-basis:100%;
+  }
+
+  /* ============ 首屏 ============ */
+  .ypf-hero{padding:46px 0 60px;position:relative;overflow:hidden;}
+  .ypf-hero::before{
+    content:"";position:absolute;inset:0;pointer-events:none;
+    background:radial-gradient(circle at 82% 8%,rgba(231,154,59,.18),transparent 58%),
+               radial-gradient(circle at 8% 92%,rgba(47,125,110,.14),transparent 55%);
+  }
+  .ypf-hero-grid{
+    position:relative;display:grid;grid-template-columns:minmax(0,6fr) minmax(0,4fr);
+    gap:40px;align-items:center;
+  }
+  .ypf-hero-copy .ypf-eyebrow{
+    display:inline-flex;align-items:center;gap:8px;font-size:.8rem;letter-spacing:.16em;
+    color:var(--ypf-amber-deep);font-weight:700;text-transform:uppercase;margin:0 0 14px;
+  }
+  .ypf-hero-copy .ypf-eyebrow::before{content:"";width:26px;height:2px;background:var(--ypf-amber);}
+  .ypf-hero h1{
+    font-size:clamp(2.3rem,5.2vw,3.7rem);line-height:1.14;margin:0 0 12px;
+    letter-spacing:-.01em;font-weight:800;
+  }
+  .ypf-hero h1 em{
+    font-style:normal;color:var(--ypf-amber-deep);
+    background:linear-gradient(transparent 62%,rgba(231,154,59,.34) 62%);
+  }
+  .ypf-hero-lead{font-size:1.06rem;color:var(--ypf-ink-soft);margin:0 0 18px;max-width:52ch;}
+  .ypf-hero-intro{
+    font-size:.95rem;color:var(--ypf-ink-soft);margin:0 0 24px;
+    border-left:3px solid var(--ypf-amber);padding-left:16px;
+  }
+  .ypf-hero-stats{
+    display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;
+    margin:0 0 26px;padding:0;list-style:none;
+  }
+  .ypf-hero-stats li{
+    background:var(--ypf-card);border:1px solid var(--ypf-line);border-radius:14px;
+    padding:13px 14px;box-shadow:0 4px 14px rgba(27,43,47,.05);
+  }
+  .ypf-hero-stats b{display:block;font-size:1.32rem;color:var(--ypf-ink);line-height:1.25;}
+  .ypf-hero-stats span{font-size:.78rem;color:var(--ypf-ink-soft);}
+  .ypf-hero-cta{display:flex;gap:12px;flex-wrap:wrap;}
+  .ypf-btn{
+    display:inline-flex;align-items:center;gap:8px;border-radius:999px;
+    padding:11px 22px;font-size:.94rem;font-weight:600;border:1px solid transparent;transition:.22s;
+  }
+  .ypf-btn-primary{background:var(--ypf-ink);color:#fff;box-shadow:0 10px 22px rgba(18,32,31,.22);}
+  .ypf-btn-primary:hover{background:var(--ypf-mint);transform:translateY(-2px);}
+  .ypf-btn-ghost{background:transparent;border-color:var(--ypf-ink);color:var(--ypf-ink);}
+  .ypf-btn-ghost:hover{background:var(--ypf-ink);color:#fff;}
+  .ypf-hero-visual{position:relative;}
+  .ypf-hero-visual figure{margin:0;border-radius:26px;overflow:hidden;box-shadow:var(--ypf-shadow);}
+  .ypf-hero-visual figcaption{
+    position:absolute;left:18px;bottom:16px;right:18px;color:#fff;font-size:.86rem;
+    background:linear-gradient(90deg,rgba(18,32,31,.78),rgba(18,32,31,.24));
+    padding:10px 14px;border-radius:12px;backdrop-filter:blur(3px);
+  }
+  .ypf-hero-badge{
+    position:absolute;top:-14px;right:-8px;background:var(--ypf-amber);color:#24180a;
+    font-weight:800;font-size:.82rem;padding:9px 15px;border-radius:999px;
+    box-shadow:0 8px 20px rgba(201,123,30,.4);transform:rotate(3deg);
+  }
+
+  /* ============ 通用区块 ============ */
+  .ypf-section{padding:58px 0;}
+  .ypf-section-alt{background:#fbf8f1;border-block:1px solid var(--ypf-line);}
+  .ypf-sec-head{margin:0 0 30px;max-width:70ch;}
+  .ypf-sec-head h2{
+    font-size:clamp(1.55rem,3.1vw,2.1rem);margin:0 0 10px;line-height:1.28;letter-spacing:-.01em;
+  }
+  .ypf-sec-head h2::before{
+    content:"";display:inline-block;width:14px;height:14px;border-radius:4px;
+    background:var(--ypf-amber);margin-right:10px;vertical-align:baseline;
+  }
+  .ypf-sec-head p{margin:0;color:var(--ypf-ink-soft);font-size:.95rem;}
+  .ypf-h3{font-size:1.12rem;margin:0 0 8px;line-height:1.4;}
+
+  .ypf-card{
+    background:var(--ypf-card);border:1px solid var(--ypf-line);border-radius:var(--ypf-radius);
+    box-shadow:0 6px 18px rgba(27,43,47,.05);transition:transform .25s,box-shadow .25s;
+  }
+  .ypf-card:hover{transform:translateY(-4px);box-shadow:var(--ypf-shadow);}
+
+  /* 焦点大图文 */
+  .ypf-focus-grid{display:grid;grid-template-columns:minmax(0,1.18fr) minmax(0,1fr);gap:28px;}
+  .ypf-focus-main{
+    position:relative;border-radius:22px;overflow:hidden;box-shadow:var(--ypf-shadow);
+  }
+  .ypf-focus-main figcaption{
+    position:absolute;inset:auto 0 0 0;padding:26px 24px 20px;color:#fff;
+    background:linear-gradient(180deg,transparent,rgba(14,26,25,.88));
+  }
+  .ypf-focus-main .ypf-tagrow{margin-bottom:8px;}
+  .ypf-focus-main h3{margin:0 0 6px;font-size:1.3rem;line-height:1.4;}
+  .ypf-focus-main p{margin:0;font-size:.9rem;color:#e7ddcb;}
+  .ypf-tagrow{display:flex;gap:6px;flex-wrap:wrap;}
+  .ypf-tag{
+    font-size:.72rem;padding:2px 9px;border-radius:999px;letter-spacing:.02em;
+    background:#efe4cd;color:#7a5310;font-weight:600;
+  }
+  .ypf-tag-dark{background:rgba(255,255,255,.16);color:#ffe2b4;}
+
+  .ypf-focus-list{display:flex;flex-direction:column;gap:14px;margin:0;padding:0;list-style:none;}
+  .ypf-focus-item{padding:16px 18px;}
+  .ypf-focus-item h3{font-size:1.02rem;margin:0 0 5px;}
+  .ypf-focus-item p{margin:0 0 8px;font-size:.87rem;color:var(--ypf-ink-soft);}
+  .ypf-meta{
+    display:flex;gap:12px;flex-wrap:wrap;align-items:center;font-size:.78rem;color:#7d8a86;
+  }
+  .ypf-meta b{color:var(--ypf-amber-deep);}
+
+  /* 视频条目 */
+  .ypf-videolist{list-style:none;margin:0;padding:0;display:grid;gap:16px;}
+  .ypf-video-item{
+    display:grid;grid-template-columns:150px minmax(0,1fr);gap:0;
+    background:var(--ypf-card);border:1px solid var(--ypf-line);border-radius:16px;
+    overflow:hidden;transition:.22s;
+  }
+  .ypf-video-item:hover{border-color:#cbba9c;box-shadow:0 10px 26px rgba(27,43,47,.09);}
+  .ypf-video-thumb{position:relative;background:#e8e0d0;min-height:100%;}
+  .ypf-video-thumb svg{width:100%;height:100%;display:block;}
+  .ypf-video-play{
+    position:absolute;inset:0;margin:auto;width:38px;height:38px;border-radius:50%;
+    background:rgba(18,32,31,.62);color:#fff;display:grid;place-items:center;
+    font-size:.72rem;backdrop-filter:blur(2px);
+  }
+  .ypf-video-body{padding:15px 18px;min-width:0;}
+  .ypf-video-body h3{margin:0 0 5px;font-size:1.02rem;line-height:1.45;}
+  .ypf-video-body p{margin:0 0 9px;font-size:.86rem;color:var(--ypf-ink-soft);}
+  .ypf-video-foot{
+    display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:.78rem;color:#7d8a86;
+    border-top:1px dashed var(--ypf-line);padding-top:9px;margin-top:2px;
+  }
+  .ypf-act{
+    border:1px solid var(--ypf-line);background:#fff;border-radius:999px;
+    font-size:.76rem;padding:3px 11px;color:var(--ypf-ink-soft);transition:.18s;
+  }
+  .ypf-act:hover{border-color:var(--ypf-amber);color:var(--ypf-amber-deep);}
+  .ypf-act.is-on{background:#fde8cd;border-color:var(--ypf-amber);color:var(--ypf-amber-deep);font-weight:700;}
+
+  /* 关键词解析 */
+  .ypf-explain{display:grid;gap:22px;}
+  .ypf-explain-block{
+    background:var(--ypf-card);border:1px solid var(--ypf-line);border-left:4px solid var(--ypf-mint);
+    border-radius:14px;padding:20px 22px;
+  }
+  .ypf-explain-block p{margin:0;font-size:.93rem;color:var(--ypf-ink-soft);}
+  .ypf-explain-block p + p{margin-top:10px;}
+  .ypf-inline-quote{
+    margin:16px 0 0;padding:14px 16px;background:#f2ece0;border-radius:12px;
+    font-size:.88rem;color:#5a4a2c;
+  }
+
+  /* 专题 */
+  .ypf-topics{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:20px;}
+  .ypf-topic{padding:20px 22px;}
+  .ypf-topic-status{
+    display:inline-block;font-size:.72rem;font-weight:700;padding:2px 10px;border-radius:999px;
+    background:#ddefe9;color:#1f6455;margin-bottom:10px;
+  }
+  .ypf-topic-status.soon{background:#fbe8cd;color:#9a5d10;}
+  .ypf-topic ul{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:8px;}
+  .ypf-topic li{
+    font-size:.86rem;color:var(--ypf-ink-soft);padding-left:16px;position:relative;
+  }
+  .ypf-topic li::before{content:"";position:absolute;left:0;top:.62em;width:6px;height:6px;border-radius:50%;background:var(--ypf-amber);}
+
+  /* 作者 */
+  .ypf-authors{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:18px;}
+  .ypf-author{padding:20px;display:flex;flex-direction:column;gap:10px;}
+  .ypf-author-top{display:flex;align-items:center;gap:12px;}
+  .ypf-avatar{
+    width:52px;height:52px;border-radius:16px;flex:none;display:grid;place-items:center;
+    font-weight:800;color:#fff;font-size:1.02rem;letter-spacing:.02em;
+  }
+  .ypf-author-top b{display:block;font-size:1rem;line-height:1.35;}
+  .ypf-author-top small{font-size:.76rem;color:var(--ypf-ink-soft);}
+  .ypf-author-desc{margin:0;font-size:.85rem;color:var(--ypf-ink-soft);}
+  .ypf-author-stats{display:flex;gap:14px;font-size:.78rem;color:#7d8a86;}
+  .ypf-author-stats b{color:var(--ypf-ink);}
+  .ypf-author .ypf-act{align-self:flex-start;}
+
+  /* 评价 */
+  .ypf-reviews{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:16px;}
+  .ypf-review{padding:18px 20px;}
+  .ypf-review p{margin:0 0 10px;font-size:.89rem;color:var(--ypf-ink-soft);}
+  .ypf-review blockquote{
+    margin:0 0 10px;font-size:.95rem;color:var(--ypf-ink);font-weight:600;
+    border-left:3px solid var(--ypf-amber);padding-left:12px;line-height:1.6;
+  }
+  .ypf-review-who{display:flex;align-items:center;gap:9px;font-size:.8rem;color:#7d8a86;}
+  .ypf-dot{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;font-size:.72rem;font-weight:800;color:#fff;flex:none;}
+
+  /* 榜单 */
+  .ypf-rank{display:grid;gap:10px;margin:0;padding:0;list-style:none;}
+  .ypf-rank li{
+    display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:14px;align-items:center;
+    background:var(--ypf-card);border:1px solid var(--ypf-line);border-radius:13px;padding:12px 16px;
+  }
+  .ypf-rank-no{
+    width:28px;height:28px;border-radius:9px;display:grid;place-items:center;
+    font-weight:800;font-size:.86rem;background:#eee5d3;color:#7a5310;
+  }
+  .ypf-rank li:nth-child(1) .ypf-rank-no{background:var(--ypf-ink);color:#ffcd84;}
+  .ypf-rank li:nth-child(2) .ypf-rank-no{background:#e7d7ba;color:#7a5310;}
+  .ypf-rank li:nth-child(3) .ypf-rank-no{background:#f0cfa0;color:#7a5310;}
+  .ypf-rank-title{font-size:.92rem;font-weight:600;line-height:1.4;}
+  .ypf-rank-title small{display:block;font-weight:400;font-size:.78rem;color:#7d8a86;}
+  .ypf-rank-val{font-size:.84rem;color:var(--ypf-amber-deep);font-weight:700;white-space:nowrap;}
+
+  /* 企业动态 */
+  .ypf-updates{list-style:none;margin:0;padding:0;display:grid;gap:0;}
+  .ypf-updates li{
+    display:grid;grid-template-columns:112px minmax(0,1fr);gap:18px;
+    padding:16px 0;border-bottom:1px dashed var(--ypf-line);
+  }
+  .ypf-updates li:last-child{border-bottom:0;}
+  .ypf-updates time{font-size:.82rem;color:var(--ypf-amber-deep);font-weight:700;}
+  .ypf-updates b{display:block;font-size:.95rem;margin-bottom:2px;}
+  .ypf-updates span{font-size:.85rem;color:var(--ypf-ink-soft);}
+
+  /* 合作墙 */
+  .ypf-partners{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,160px),1fr));gap:14px;}
+  .ypf-partner{
+    background:var(--ypf-card);border:1px solid var(--ypf-line);border-radius:14px;
+    padding:18px 16px;text-align:center;font-size:.9rem;font-weight:700;color:var(--ypf-ink-soft);
+    transition:.2s;
+  }
+  .ypf-partner:hover{border-color:var(--ypf-mint);color:var(--ypf-mint);transform:translateY(-3px);}
+  .ypf-partner small{display:block;font-weight:400;font-size:.74rem;color:#8d9995;margin-top:4px;}
+
+  /* FAQ */
+  .ypf-faq{display:grid;gap:10px;max-width:860px;}
+  .ypf-faq details{
+    background:var(--ypf-card);border:1px solid var(--ypf-line);border-radius:13px;
+    padding:14px 18px;transition:.2s;
+  }
+  .ypf-faq details[open]{border-color:#cbba9c;box-shadow:0 8px 20px rgba(27,43,47,.07);}
+  .ypf-faq summary{
+    cursor:pointer;font-weight:600;font-size:.94rem;list-style:none;
+    display:flex;justify-content:space-between;gap:14px;align-items:baseline;
+  }
+  .ypf-faq summary::-webkit-details-marker{display:none;}
+  .ypf-faq summary::after{content:"＋";color:var(--ypf-amber-deep);font-weight:800;flex:none;}
+  .ypf-faq details[open] summary::after{content:"－";}
+  .ypf-faq p{margin:10px 0 0;font-size:.87rem;color:var(--ypf-ink-soft);}
+
+  /* 投稿 / 联系 */
+  .ypf-contact{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:24px;}
+  .ypf-contact-card{padding:24px;display:flex;flex-direction:column;gap:12px;}
+  .ypf-contact-card p{margin:0;font-size:.9rem;color:var(--ypf-ink-soft);}
+  .ypf-contact-list{list-style:none;margin:0;padding:0;font-size:.88rem;color:var(--ypf-ink-soft);display:grid;gap:7px;}
+  .ypf-contact-list b{color:var(--ypf-ink);}
+
+  /* 页脚 */
+  .ypf-footer{background:var(--ypf-night);color:#c8cfc9;padding:48px 0 22px;font-size:.86rem;}
+  .ypf-footer h3{font-size:1rem;color:#fff;margin:0 0 12px;}
+  .ypf-footer-grid{display:grid;grid-template-columns:minmax(0,1.5fr) repeat(3,minmax(0,1fr));gap:28px;}
+  .ypf-footer-brand p{margin:0 0 8px;line-height:1.7;color:#a8b3ad;}
+  .ypf-footer-links{list-style:none;margin:0;padding:0;display:grid;gap:7px;}
+  .ypf-footer-links a{color:#c8cfc9;}
+  .ypf-footer-links a:hover{color:#ffce85;}
+  .ypf-footer-bottom{
+    border-top:1px solid rgba(255,255,255,.12);margin-top:30px;padding-top:16px;
+    display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:.78rem;color:#8f9b95;
+  }
+
+  /* Toast / 弹窗 / 回到顶部 */
+  .ypf-toast{
+    position:fixed;left:50%;bottom:34px;transform:translate(-50%,20px);
+    background:var(--ypf-ink);color:#fff;font-size:.86rem;padding:11px 22px;border-radius:999px;
+    box-shadow:0 12px 30px rgba(0,0,0,.28);opacity:0;pointer-events:none;transition:.3s;z-index:150;
+    max-width:calc(100% - 40px);
+  }
+  .ypf-toast.is-show{opacity:1;transform:translate(-50%,0);}
+  .ypf-modal-mask{
+    position:fixed;inset:0;background:rgba(16,26,25,.55);backdrop-filter:blur(3px);
+    display:none;place-items:center;padding:20px;z-index:160;
+  }
+  .ypf-modal-mask.is-open{display:grid;}
+  .ypf-modal{
+    background:var(--ypf-card);border-radius:20px;max-width:520px;width:100%;
+    padding:26px 26px 22px;box-shadow:0 26px 60px rgba(0,0,0,.32);position:relative;
+    max-height:86vh;overflow:auto;
+  }
+  .ypf-modal h3{margin:0 0 10px;font-size:1.16rem;}
+  .ypf-modal p{font-size:.9rem;color:var(--ypf-ink-soft);margin:0 0 14px;}
+  .ypf-modal-close{
+    position:absolute;top:12px;right:14px;border:0;background:#eee5d3;border-radius:50%;
+    width:30px;height:30px;font-size:.9rem;color:#5a4a2c;
+  }
+  .ypf-modal label{display:block;font-size:.82rem;margin:0 0 4px;color:var(--ypf-ink-soft);}
+  .ypf-modal input,.ypf-modal textarea,.ypf-modal select{
+    width:100%;border:1px solid var(--ypf-line);border-radius:10px;padding:9px 12px;
+    font-size:.88rem;font-family:inherit;background:#fff;color:var(--ypf-ink);margin-bottom:12px;
+  }
+  .ypf-modal textarea{min-height:84px;resize:vertical;}
+  .ypf-backtop{
+    position:fixed;right:20px;bottom:24px;width:44px;height:44px;border-radius:50%;
+    border:1px solid var(--ypf-line);background:var(--ypf-card);color:var(--ypf-ink);
+    font-size:1rem;box-shadow:0 8px 22px rgba(27,43,47,.16);
+    display:none;place-items:center;z-index:120;transition:.2s;
+  }
+  .ypf-backtop.is-show{display:grid;}
+  .ypf-backtop:hover{background:var(--ypf-ink);color:#fff;}
+
+  @media (max-width:980px){
+    .ypf-hero-grid{grid-template-columns:minmax(0,1fr);gap:30px;}
+    .ypf-focus-grid{grid-template-columns:minmax(0,1fr);}
+    .ypf-contact{grid-template-columns:minmax(0,1fr);}
+    .ypf-footer-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr);}
+    .ypf-nav{order:4;flex-basis:100%;display:none;}
+    .ypf-nav.is-open{display:block;}
+    .ypf-nav ul{flex-direction:column;gap:0;padding:6px 0;}
+    .ypf-burger{display:grid;place-items:center;}
+    .ypf-header-tools{margin-left:auto;}
+  }
+  @media (max-width:640px){
+    .ypf-wrap{width:calc(100% - 28px);}
+    .ypf-hero-stats{grid-template-columns:minmax(0,1fr);}
+    .ypf-video-item{grid-template-columns:minmax(0,1fr);}
+    .ypf-video-thumb{aspect-ratio:16/9;min-height:0;}
+    .ypf-search input{width:96px;}
+    .ypf-updates li{grid-template-columns:minmax(0,1fr);gap:4px;}
+    .ypf-footer-grid{grid-template-columns:minmax(0,1fr);}
+    .ypf-rank li{grid-template-columns:auto minmax(0,1fr);}
+    .ypf-rank-val{grid-column:2;justify-self:start;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{transition:none !important;animation:none !important;}
+    html{scroll-behavior:auto;}
+  }
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+<a class="ypf-skip" href="#ypf-main">跳到主要内容</a>
+
+<div class="ypf-sticktop">
+  <div class="ypf-notice">
+    <div class="ypf-wrap ypf-notice-inner">
+      <span class="ypf-notice-tag">官方发布</span>
+      <p>「印象足拍45期」正片上线：本期新增 12 支原创高清街拍短片、3 个城市在地企划，投稿通道同步开放至 12 月 20 日。</p>
+      <a href="#ypf-submit">查看投稿要求 →</a>
+    </div>
+  </div>
+
+  <header class="ypf-header">
+    <div class="ypf-wrap ypf-header-inner">
+      <a class="ypf-brand" href="#ypf-top" aria-label="印象足拍45期 官网首页">
+        <span class="ypf-brand-mark" aria-hidden="true"><span>足</span></span>
+        <span class="ypf-brand-text">
+          <b>印象足拍45期</b>
+          <small>IMPRESSION · 官方影像</small>
+        </span>
+      </a>
+
+      <button class="ypf-burger" id="ypf-burger" aria-expanded="false" aria-controls="ypf-nav">☰</button>
+
+      <nav class="ypf-nav" id="ypf-nav" aria-label="主导航">
+        <ul>
+          <li><a href="#ypf-top">首页</a></li>
+          <li><a href="#ypf-feature">精选内容</a></li>
+          <li><a href="#ypf-explain">品牌解析</a></li>
+          <li><a href="#ypf-topics">专题企划</a></li>
+          <li><a href="#ypf-authors">创作者</a></li>
+          <li><a href="#ypf-reviews">口碑评价</a></li>
+          <li><a href="#ypf-faq">帮助中心</a></li>
+        </ul>
+      </nav>
+
+      <div class="ypf-header-tools">
+        <div class="ypf-search">
+          <input type="search" id="ypf-search-input" placeholder="搜索内容 / 创作者" aria-label="搜索内容或创作者">
+          <button type="button" id="ypf-search-btn">搜索</button>
+        </div>
+      </div>
+      <p class="ypf-search-hint" id="ypf-search-hint" aria-live="polite"></p>
+    </div>
+  </header>
+</div>
+
+<main id="ypf-main">
+  <span id="ypf-top"></span>
+
+  <!-- S2 首屏 -->
+  <section class="ypf-hero" aria-labelledby="ypf-hero-title">
+    <div class="ypf-wrap ypf-hero-grid">
+      <div class="ypf-hero-copy">
+        <p class="ypf-eyebrow">官方网站 · 品牌门户</p>
+        <h1 id="ypf-hero-title"><em>印象足拍45期</em> 官方影像社区</h1>
+        <p class="ypf-hero-lead">以脚步丈量城市，用镜头记录真实。这里是印象足拍45期的官方网站，也是街拍与人文影像创作者共同的内容生态。</p>
+        <p class="ypf-hero-intro">作为国内深耕街拍与人文影像的原创品牌，印象足拍45期致力于为创作者与企业搭建高品质内容平台，提供高清正版影像、专业创作工具与持续运营的社区服务，让每一次按下快门都被值得信赖地看见。</p>
+        <ul class="ypf-hero-stats">
+          <li><b data-ypf-count="4200">4200+</b><span>原创高清影像作品</span></li>
+          <li><b data-ypf-count="186">186</b><span>签约及入驻创作者</span></li>
+          <li><b data-ypf-count="45">45</b><span>已发布期数企划</span></li>
+        </ul>
+        <div class="ypf-hero-cta">
+          <a class="ypf-btn ypf-btn-primary" href="#ypf-feature">观看本期正片</a>
+          <a class="ypf-btn ypf-btn-ghost" href="#ypf-submit">我要投稿</a>
+          <button class="ypf-btn ypf-btn-ghost" type="button" data-ypf-share="印象足拍45期 官方网站">分享本页</button>
+        </div>
+      </div>
+
+      <div class="ypf-hero-visual">
+        <span class="ypf-hero-badge">第 45 期 · 正片上线</span>
+        <figure>
+          <svg viewBox="0 0 720 620" role="img" aria-label="印象足拍45期首屏主视觉：黄昏城市街道上行走者的脚步与镜头光斑" style="width:100%;height:auto;display:block;">
+            <defs>
+              <linearGradient id="ypfSky45" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#26424a"/>
+                <stop offset="52%" stop-color="#7d6a55"/>
+                <stop offset="100%" stop-color="#e0a05a"/>
+              </linearGradient>
+              <linearGradient id="ypfRoad45" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#3a3a38"/>
+                <stop offset="100%" stop-color="#1a1d1c"/>
+              </linearGradient>
+              <radialGradient id="ypfSun45" cx="50%" cy="50%" r="50%">
+                <stop offset="0" stop-color="#ffd79a"/>
+                <stop offset="100%" stop-color="#ffb454" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+            <rect width="720" height="620" fill="url(#ypfSky45)"/>
+            <circle cx="520" cy="250" r="130" fill="url(#ypfSun45)"/>
+            <circle cx="520" cy="250" r="46" fill="#ffd79a" opacity=".92"/>
+            <g fill="#243337" opacity=".85">
+              <rect x="0" y="230" width="96" height="220"/>
+              <rect x="104" y="180" width="72" height="270"/>
+              <rect x="184" y="256" width="58" height="194"/>
+              <rect x="590" y="206" width="86" height="244"/>
+              <rect x="684" y="268" width="36" height="182"/>
+            </g>
+            <g fill="#ffd79a" opacity=".55">
+              <rect x="18" y="252" width="14" height="18"/><rect x="52" y="252" width="14" height="18"/>
+              <rect x="18" y="296" width="14" height="18"/><rect x="52" y="296" width="14" height="18"/>
+              <rect x="120" y="206" width="12" height="16"/><rect x="146" y="206" width="12" height="16"/>
+              <rect x="120" y="244" width="12" height="16"/><rect x="606" y="228" width="12" height="16"/>
+              <rect x="636" y="228" width="12" height="16"/><rect x="606" y="266" width="12" height="16"/>
+            </g>
+            <rect x="0" y="446" width="720" height="174" fill="url(#ypfRoad45)"/>
+            <g stroke="#d8a45e" stroke-width="3" opacity=".6" stroke-linecap="round">
+              <line x1="80" y1="500" x2="150" y2="500"/>
+              <line x1="230" y1="500" x2="300" y2="500"/>
+              <line x1="380" y1="500" x2="450" y2="500"/>
+              <line x1="530" y1="500" x2="600" y2="500"/>
+            </g>
+            <g fill="#151c1c">
+              <ellipse cx="300" cy="596" rx="130" ry="20" opacity=".5"/>
+              <path d="M262 340c14-8 30-8 42 2l10 62-16 74h-26l8-72-24-58z"/>
+              <path d="M300 404l26-8 18 60-14 10-30-62z"/>
+              <path d="M330 340c16-4 30 4 34 18l6 58-22 8-18-84z"/>
+              <path d="M286 476h28l4 56h-24z"/>
+              <path d="M330 476h26l10 54h-24z"/>
+            </g>
+            <g fill="#e79a3b">
+              <circle cx="322" cy="318" r="17"/>
+              <rect x="316" y="330" width="12" height="16" rx="5" fill="#c97b1e"/>
+            </g>
+            <circle cx="120" cy="120" r="6" fill="#ffe2b4" opacity=".8"/>
+            <circle cx="170" cy="90" r="3.4" fill="#ffe2b4" opacity=".6"/>
+            <circle cx="640" cy="118" r="4.4" fill="#ffe2b4" opacity=".7"/>
+            <circle cx="660" cy="170" r="2.6" fill="#ffe2b4" opacity=".55"/>
+            <rect x="0" y="0" width="720" height="620" fill="none" stroke="rgba(255,226,180,.22)" stroke-width="3"/>
+          </svg>
+          <figcaption>第 45 期主视觉《傍晚十九点三十七分》，摄于旧城石板街。</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- S3 焦点内容 -->
+  <section class="ypf-section ypf-section-alt" id="ypf-feature" aria-labelledby="ypf-feature-title">
+    <div class="ypf-wrap">
+      <div class="ypf-sec-head">
+        <h2 id="ypf-feature-title">本期精选 · 印象足拍45期重点内容</h2>
+        <p>编辑团队从第 45 期投稿中精选 2 支重点短片与 5 条视频索引，兼顾深度与可看性，全部为平台原创高清内容。</p>
+      </div>
+
+      <div class="ypf-focus-grid" style="margin-bottom:32px;">
+        <figure class="ypf-focus-main">
+          <svg viewBox="0 0 800 500" role="img" aria-label="焦点短片《旧巷十七步》封面：窄巷两侧墙面与斜射光线" style="width:100%;height:auto;display:block;">
+            <defs>
+              <linearGradient id="ypfAlley45" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#4b4a41"/>
+                <stop offset="60%" stop-color="#7a6a52"/>
+                <stop offset="100%" stop-color="#c79a62"/>
+              </linearGradient>
+              <linearGradient id="ypfAlleyFloor" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#a58b66"/>
+                <stop offset="100%" stop-color="#5c4d3a"/>
+              </linearGradient>
+            </defs>
+            <rect width="800" height="500" fill="url(#ypfAlley45)"/>
+            <path d="M0 0h212l108 500H0z" fill="#3a3931"/>
+            <path d="M800 0H588l-96 500h308z" fill="#2f312c"/>
+            <path d="M0 500h800L596 300H204z" fill="url(#ypfAlleyFloor)"/>
+            <g fill="#e9b877" opacity=".8">
+              <path d="M270 60l70 0 46 240-96 0z" opacity=".35"/>
+            </g>
+            <g stroke="#2b2b26" stroke-width="5" opacity=".5">
+              <line x1="212" y1="40" x2="320" y2="500"/>
+              <line x1="588" y1="40" x2="492" y2="500"/>
+            </g>
+            <g fill="#f2c98d">
+              <rect x="252" y="150" width="26" height="40" rx="3" opacity=".7"/>
+              <rect x="520" y="190" width="24" height="36" rx="3" opacity=".6"/>
+            </g>
+            <g fill="#1d1c19">
+              <circle cx="400" cy="286" r="15"/>
+              <path d="M388 300h24l8 62-10 46h-20l-6-46-10-10z"/>
+              <ellipse cx="400" cy="418" rx="42" ry="10" opacity=".4"/>
+            </g>
+            <path d="M400 296l6 60" stroke="#e79a3b" stroke-width="3"/>
+            <rect x="0" y="0" width="800" height="500" fill="none" stroke="rgba(255,226,180,.2)" stroke-width="3"/>
+          </svg>
+          <figcaption>
+            <div class="ypf-tagrow"><span class="ypf-tag-dark">本期主打</span><span class="ypf-tag-dark">城市探索</span></div>
+            <h3>《旧巷十七步》— 用十七步走完一条老巷的十二种光</h3>
+            <p>导演以固定机位与手持交替，记录旧城巷落在一天中不同时段的光影变化，是印象足拍45期最具代表性的原创影像之一。</p>
+          </figcaption>
+        </figure>
+
+        <ul class="ypf-focus-list">
+          <li class="ypf-card ypf-focus-item">
+            <h3>《站台三分钟》— 早班车前的沉默群像</h3>
+            <p>在同一个站台蹲守九个清晨，捕捉通勤族的停顿、抬手与回望，镜头克制而温暖。</p>
+            <div class="ypf-meta"><span>作者 <b>@路见</b></span><span>播放 12.4万</span><span>点赞 8621</span></div>
+          </li>
+          <li class="ypf-card ypf-focus-item">
+            <h3>《石阶上的修鞋匠》— 一门手艺的四十年</h3>
+            <p>人物访谈与手艺特写结合，讲述老城修鞋匠的日常节奏，片尾附完整口述摘录。</p>
+            <div class="ypf-meta"><span>作者 <b>@阿柘</b></span><span>播放 9.7万</span><span>点赞 6210</span></div>
+          </li>
+          <li class="ypf-card ypf-focus-item">
+            <h3>《雨天的快门声》— 街拍实战全流程</h3>
+            <p>从构图预判到后期调色，完整演示阴雨天街拍的六个关键判断，适合新手反复观看。</p>
+            <div class="ypf-meta"><span>作者 <b>@半格镜头</b></span><span>播放 8.3万</span><span>点赞 5447</span></div>
+          </li>
+        </ul>
+      </div>
+
+      <h3 class="ypf-h3" style="margin-bottom:14px;">视频索引 · 按热度排列</h3>
+      <ul class="ypf-videolist">
+        <li class="ypf-video-item">
+          <div class="ypf-video-thumb">
+            <svg viewBox="0 0 300 200" role="img" aria-label="视频《夜班公交沿线》缩略图：夜间公交车窗与路灯" style="width:100%;height:100%;">
+              <rect width="300" height="200" fill="#1c2a2e"/>
+              <rect x="30" y="52" width="240" height="100" rx="12" fill="#2f4247"/>
+              <g fill="#ffce85" opacity=".85">
+                <rect x="46" y="68" width="52" height="34" rx="4"/>
+                <rect x="110" y="68" width="52" height="34" rx="4"/>
+                <rect x="174" y="68" width="52" height="34" rx="4"/>
+              </g>
+              <g fill="#c4d4cf" opacity=".5">
+                <circle cx="70" cy="128" r="9"/><circle cx="134" cy="128" r="9"/><circle cx="198" cy="128" r="9"/>
+              </g>
+              <rect x="30" y="152" width="240" height="8" rx="4" fill="#e79a3b"/>
+            </svg>
+            <span class="ypf-video-play" aria-hidden="true">▶</span>
+          </div>
+          <div class="ypf-video-body">
+            <h3>《夜班公交沿线》— 城市睡前的最后一趟</h3>
+            <p>跟车三小时，记录夜班公交上司机、代驾与夜归人的片段，安静但不冷清。</p>
+            <div class="ypf-tagrow"><span class="ypf-tag">日常记录</span><span class="ypf-tag">城市探索</span></div>
+            <div class="ypf-video-foot">
+              <span>@夜里取景</span><span>播放 15.2万</span><span>点赞 1.1万</span><span>收藏 4302</span>
+              <button class="ypf-act" type="button" data-ypf-like>点赞</button>
+              <button class="ypf-act" type="button" data-ypf-fav>收藏</button>
+            </div>
+          </div>
+        </li>
+
+        <li class="ypf-video-item">
+          <div class="ypf-video-thumb">
+            <svg viewBox="0 0 300 200" role="img" aria-label="视频《十平米的厨房》缩略图：小厨房灶台与窗户暖光" style="width:100%;height:100%;">
+              <rect width="300" height="200" fill="#f0e3cb"/>
+              <rect x="0" y="120" width="300" height="80" fill="#cbb08a"/>
+              <rect x="36" y="40" width="90" height="70" rx="6" fill="#8fb3a8"/>
+              <rect x="44" y="48" width="74" height="54" rx="4" fill="#dcebe5"/>
+              <rect x="160" y="86" width="106" height="12" rx="6" fill="#8a7455"/>
+              <rect x="174" y="60" width="26" height="26" rx="6" fill="#e79a3b"/>
+              <rect x="214" y="66" width="20" height="20" rx="5" fill="#2f7d6e"/>
+            </svg>
+            <span class="ypf-video-play" aria-hidden="true">▶</span>
+          </div>
+          <div class="ypf-video-body">
+            <h3>《十平米的厨房》— 出租屋里的四季三餐</h3>
+            <p>博主用一年时间记录小厨房的变化：从一只锅到一面调料墙，是生活方式影像的样本。</p>
+            <div class="ypf-tagrow"><span class="ypf-tag">生活方式</span><span class="ypf-tag">美食烹饪</span></div>
+            <div class="ypf-video-foot">
+              <span>@小满灶台</span><span>播放 21.6万</span><span>点赞 1.8万</span><span>收藏 9120</span>
+              <button class="ypf-act" type="button" data-ypf-like>点赞</button>
+              <button class="ypf-act" type="button" data-ypf-fav>收藏</button>
+            </div>
+          </div>
+        </li>
+
+        <li class="ypf-video-item">
+          <div class="ypf-video-thumb">
+            <svg viewBox="0 0 300 200" role="img" aria-label="视频《一镜到底的骑楼》缩略图：骑楼立柱与延伸的长廊" style="width:100%;height:100%;">
+              <rect width="300" height="200" fill="#dbe7e3"/>
+              <path d="M0 200V66h60v134zM70 200V52h56v148zM140 200V70h52v130zM206 200V44h56v156z" fill="#8ba49c"/>
+              <rect x="0" y="104" width="300" height="7" fill="#f3f7f4"/>
+              <g fill="#ffe2b4" opacity=".85"><rect x="82" y="70" width="26" height="34"/><rect x="150" y="86" width="26" height="34"/></g>
+              <rect x="0" y="176" width="300" height="24" fill="#a5bcb4"/>
+            </svg>
+            <span class="ypf-video-play" aria-hidden="true">▶</span>
+          </div>
+          <div class="ypf-video-body">
+            <h3>《一镜到底的骑楼》— 运镜与构图的现场拆解</h3>
+            <p>完整分享稳定器走位、焦点控制与呼吸节奏，附 3 个可复用的运镜模板。</p>
+            <div class="ypf-tagrow"><span class="ypf-tag">教程干货</span><span class="ypf-tag">实用技巧</span></div>
+            <div class="ypf-video-foot">
+              <span>@半格镜头</span><span>播放 7.8万</span><span>点赞 4906</span><span>收藏 3715</span>
+              <button class="ypf-act" type="button" data-ypf-like>点赞</button>
+              <button class="ypf-act" type="button" data-ypf-fav>收藏</button>
+            </div>
+          </div>
+        </li>
+
+        <li class="ypf-video-item">
+          <div class="ypf-video-thumb">
+            <svg viewBox="0 0 300 200" role="img" aria-label="视频《胶卷里的父亲》缩略图：老照片相框与胶片齿孔" style="width:100%;height:100%;">
+              <rect width="300" height="200" fill="#efe2d0"/>
+              <rect x="40" y="26" width="104" height="140" rx="6" fill="#fffdf8" stroke="#c0a485" stroke-width="4"/>
+              <circle cx="92" cy="80" r="22" fill="#c9a47d"/>
+              <path d="M60 150c6-34 26-44 32-44s26 10 32 44z" fill="#a98a66"/>
+              <rect x="170" y="46" width="96" height="104" rx="6" fill="#2f4247"/>
+              <g fill="#f6d9a6">
+                <rect x="170" y="46" width="96" height="10" rx="3"/>
+                <rect x="170" y="140" width="96" height="10" rx="3"/>
+              </g>
+              <g fill="#d8c2a4"><rect x="186" y="70" width="60" height="6" rx="3"/><rect x="186" y="86" width="60" height="6" rx="3"/><rect x="186" y="102" width="44" height="6" rx="3"/></g>
+            </svg>
+            <span class="ypf-video-play" aria-hidden="true">▶</span>
+          </div>
+          <div class="ypf-video-body">
+            <h3>《胶卷里的父亲》— 家庭影像的修复与重看</h3>
+            <p>从扫描、校色到重新剪辑，兄妹二人把二十年前的家庭录像整理成 8 分钟短片。</p>
+            <div class="ypf-tagrow"><span class="ypf-tag">情感故事</span><span class="ypf-tag">日常记录</span></div>
+            <div class="ypf-video-foot">
+              <span>@阿柘</span><span>播放 18.9万</span><span>点赞 1.5万</span><span>收藏 6874</span>
+              <button class="ypf-act" type="button" data-ypf-like>点赞</button>
+              <button class="ypf-act" type="button" data-ypf-fav>收藏</button>
+            </div>
+          </div>
+        </li>
+
+        <li class="ypf-video-item">
+          <div class="ypf-video-thumb">
+            <svg viewBox="0 0 300 200" role="img" aria-label="视频《公园长椅旁的两小时》缩略图：长椅、树影与散步的人群" style="width:100%;height:100%;">
+              <rect width="300" height="200" fill="#cfe0cf"/>
+              <circle cx="248" cy="52" r="26" fill="#f6e3a8"/>
+              <path d="M0 200V120c40-22 78-22 118 0v80zM182 200v-72c38-20 76-20 118 0v72z" fill="#7fa07c"/>
+              <rect x="60" y="140" width="96" height="10" rx="5" fill="#8a7455"/>
+              <rect x="60" y="156" width="96" height="8" rx="4" fill="#6f5d45"/>
+              <rect x="70" y="164" width="8" height="26" fill="#6f5d45"/>
+              <rect x="138" y="164" width="8" height="26" fill="#6f5d45"/>
+              <g fill="#2f7d6e" opacity=".85"><circle cx="196" cy="150" r="8"/><circle cx="220" cy="152" r="7"/><circle cx="242" cy="148" r="8"/></g>
+            </svg>
+            <span class="ypf-video-play" aria-hidden="true">▶</span>
+          </div>
+          <div class="ypf-video-body">
+            <h3>《公园长椅旁的两小时》— 一场没有台词的观察</h3>
+            <p>不采访、不旁白，只用环境声与固定镜头记录一个下午的路过者，适合安静观看。</p>
+            <div class="ypf-tagrow"><span class="ypf-tag">治愈影像</span><span class="ypf-tag">城市探索</span></div>
+            <div class="ypf-video-foot">
+              <span>@路见</span><span>播放 6.4万</span><span>点赞 3980</span><span>收藏 2411</span>
+              <button class="ypf-act" type="button" data-ypf-like>点赞</button>
+              <button class="ypf-act" type="button" data-ypf-fav>收藏</button>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- S4 关键词解析（800字以上） -->
+  <section class="ypf-section" id="ypf-explain" aria-labelledby="ypf-explain-title">
+    <div class="ypf-wrap">
+      <div class="ypf-sec-head">
+        <h2 id="ypf-explain-title">品牌深度解析 · 印象足拍45期内容生态</h2>
+        <p>从品牌定位、内容选题到创作方法，理解印象足拍45期这一官方影像品牌为何能持续输出值得信赖的精品内容。</p>
+      </div>
+
+      <div class="ypf-explain">
+        <div class="ypf-explain-block">
+          <h3 class="ypf-h3">一、印象足拍45期的品牌定位与内容逻辑</h3>
+          <p>印象足拍45期并不是一本简单的街拍画册，而是一个以「脚步 + 镜头」为核心方法的影像内容生态。品牌自第一期起就确立了三条清晰的内容逻辑：其一，只做原创与正版影像，所有上架作品均经过创作者授权与编辑复核；其二，坚持高清与真实的表达，不用过度滤镜代替现场判断；其三，用企业级的运营方式管理社区，让创作者有稳定的更新节奏、明确的投稿规范与可预期的曝光机制。</p>
+          <p>到第 45 期，平台已经积累 4200 余件原创高清影像作品，签约与入驻创作者 186 位，覆盖城市探索、日常记录、人物访谈、教程干货、治愈影像、美食烹饪、在地文化等多个内容方向。这些方向并非随意堆叠，而是围绕「走进真实场景」这一品牌内核逐层展开：城市探索负责发现场景，日常记录负责保存细节，人物访谈负责解释细节背后的生活，教程干货则把经验沉淀为可复用的方法。</p>
+          <p>因此，印象足拍45期的每一期企划都更像一次策展。编辑团队会先确定一个母题，例如「傍晚」「手艺」「小厨房」，再向社区公开征集，最后由作者与编辑共同筛选出 10 至 15 支短片。这种策展机制让品牌在保持多元的同时不失去品质，也让普通用户能够稳定地看到真正值得信赖的内容。</p>
+        </div>
+
+        <div class="ypf-explain-block">
+          <h3 class="ypf-h3">二、从投稿到上线的品质把控</h3>
+          <p>一个作品从投稿到出现在印象足拍45期官网，大致要经过四个环节。第一是初筛，编辑会在 3 个工作日内确认素材是否清晰、是否存在版权风险，以及是否与当期的内容方向匹配。第二是内容复核，重点检查画面中的人物是否经过授权、是否含有不适合公开的场景细节，并给出具体的修改建议。第三是技术规范，平台要求画面分辨率不低于 1080P、画幅比例统一、字幕位置不遮挡关键画面，音频电平控制在合理区间。</p>
+          <p>第四是呈现优化。编辑会为作品撰写标题与摘要，补齐标签、作者信息与数据卡片，并为重点条目制作独立的封面视觉。对于被选为「本期主打」的内容，平台还会安排一次创作者访谈，把幕后思路整理成图文，与视频一同发布。这套流程看起来繁琐，但正是它让印象足拍45期在同类社区中形成了口碑：用户知道点开的每一支作品都不会浪费注意力，创作者也知道自己的劳动会被认真对待。</p>
+          <p>值得注意的是，平台并不追求数量上的绝对优势。第 45 期共收到约 340 份投稿，最终上线 12 支正片与 20 余条短片段。被落选的作品也会收到具体的反馈意见，部分作品在修订后会进入下一期候选池。这种持续运营的机制，是「行业领先」这一目标最实际的含义——不是把口号挂在首页，而是把每一次审片、每一条反馈、每一个封面都做到可追溯。</p>
+        </div>
+
+        <div class="ypf-explain-block">
+          <h3 class="ypf-h3">三、创作者生态：让多元与专业并存</h3>
+          <p>印象足拍45期的创作者结构相当多元。有以固定机位见长的观察型导演，也有擅长一镜到底的运镜作者，还有把镜头对准自家厨房的生活记录者。他们中既有从业十余年的专业影像工作者，也有刚从大学毕业、用手机开始拍摄的新人。平台对两类创作者的要求一致：画面清晰、叙事诚实、授权完整；而提供的支持则各有侧重——专业作者可以获得专题策划与商业合作对接，新人作者可以获得技术指导与新人榜曝光。</p>
+          <p>为了让社区保持活力，品牌设置了月度命题、公开选题投票与创作挑战赛。每月公布一个主题词，例如「转角」「雨天」「回程」，优秀作品会进入季度合集。平台同时提供脚本灵感、标题建议与剪辑思路等辅助工具，帮助作者把模糊的感觉变成可执行的拍摄计划。这种做法让创作不再是孤立的灵感一闪，而是一个可以持续成长的过程。</p>
+          <p>在版权与收益方面，印象足拍45期坚持透明原则：创作者保留作品著作权，平台获得授权范围内的展示与推广权利；商业合作产生的收益按约定比例分成，并在企业动态中公开更新。用户至上不是一句好听的话，它具体表现为清晰的规则、可查阅的说明和及时的沟通渠道。</p>
+        </div>
+
+        <div class="ypf-explain-block">
+          <h3 class="ypf-h3">四、品牌的社会责任与长期主义</h3>
+          <p>街拍与人文影像天然涉及公共空间与陌生人的肖像。印象足拍45期把「尊重」写在创作规范的第一条：拍摄前尽量沟通，涉及近景人物必须取得同意，涉及未成年人一律不公开；对于记录老手艺、老街区的内容，平台会主动与当地社区沟通，避免给居民生活带来打扰。这些规范看似限制了创作自由，实际上反而让作品更耐看——因为镜头里的人是放松的，场景是可信的。</p>
+          <p>品牌还持续做一件事：把优质内容整理成可长期查阅的资料库。第 45 期上线后，过去 44 期的作品会按题材、地域与作者重新编目，形成清晰的索引。对普通观众来说，这是一种陪伴；对创作者来说，这是一个可以回看的成长档案；对行业来说，这是一份真实的影像样本。</p>
+          <p>综合来看，印象足拍45期的竞争力并不来自某个单一爆款，而来自稳定的内容标准、开放的创作者生态与长期运营的耐心。它既是一个视频品牌官网，也是一个持续生长的社区。我们相信，真正有影响力的内容平台，应该让创作者被看见、让用户被尊重、让每一次记录都经得起时间检验。</p>
+          <p class="ypf-inline-quote">品牌理念：以脚步为尺，以镜头为笔，记录真实、温暖而有力量的日常。 — 印象足拍45期 官方发布</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S4 专题企划 -->
+  <section class="ypf-section ypf-section-alt" id="ypf-topics" aria-labelledby="ypf-topics-title">
+    <div class="ypf-wrap">
+      <div class="ypf-sec-head">
+        <h2 id="ypf-topics-title">专题企划 · 第 45 期策展单元</h2>
+        <p>三个正在进行的专题，覆盖城市在地文化、手艺人与生活日常，欢迎创作者围绕专题继续投稿。</p>
+      </div>
+
+      <div class="ypf-topics">
+        <article class="ypf-card ypf-topic">
+          <span class="ypf-topic-status">更新中 · 已上线 6 支</span>
+          <h3 class="ypf-h3">专题一：傍晚十九点三十七分</h3>
+          <p style="font-size:.88rem;color:var(--ypf-ink-soft);margin:0;">以一天中光线最柔软的时刻为线索，征集城市黄昏影像，强调自然光与生活气息。</p>
+          <ul>
+            <li>《旧巷十七步》— 一条巷子的十二种光</li>
+            <li>《下班之后的桥》— 通勤者与河面的反光</li>
+            <li>《菜市场收摊前》— 最后半小时的讨价与收拾</li>
+          </ul>
+        </article>
+
+        <article class="ypf-card ypf-topic">
+          <span class="ypf-topic-status">更新中 · 已上线 4 支</span>
+          <h3 class="ypf-h3">专题二：手上还有活的手艺人</h3>
+          <p style="font-size:.88rem;color:var(--ypf-ink-soft);margin:0;">记录仍在坚持手工劳作的匠人，用访谈与特写呈现手艺的细节与节奏。</p>
+          <ul>
+            <li>《石阶上的修鞋匠》— 一门手艺的四十年</li>
+            <li>《最后的铜匠铺》— 敲打声里的时间刻度</li>
+            <li>《裁缝铺的下午》— 一件旧衣的修补过程</li>
+          </ul>
+        </article>
+
+        <article class="ypf-card ypf-topic">
+          <span class="ypf-topic-status soon">即将开启 · 12 月 1 日</span>
+          <h3 class="ypf-h3">专题三：我的十平米</h3>
+          <p style="font-size:.88rem;color:var(--ypf-ink-soft);margin:0;">面向年轻创作者的居住影像企划，讲述小空间里的生活方式与自我安放。</p>
+          <ul>
+            <li>《十平米的厨房》— 出租屋里的四季三餐</li>
+            <li>《靠窗的书桌》— 一个人的晚间阅读</li>
+            <li>《阳台上的六盆植物》— 从枯萎到重新发芽</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- S5 创作者矩阵 -->
+  <section class="ypf-section" id="ypf-authors" aria-labelledby="ypf-authors-title">
+    <div class="ypf-wrap">
+      <div class="ypf-sec-head">
+        <h2 id="ypf-authors-title">创作者矩阵 · 印象足拍45期签约作者</h2>
+        <p>五位风格各异的创作者，构成本期内容的主要作者阵容，点击可查看完整档案。</p>
+      </div>
+
+      <div class="ypf-authors">
+        <article class="ypf-card ypf-author">
+          <div class="ypf-author-top">
+            <span class="ypf-avatar" style="background:linear-gradient(135deg,#e79a3b,#b3651a);" aria-hidden="true">路</span>
+            <div><b>@路见</b><small>城市探索 · 观察型导演</small></div>
+          </div>
+          <p class="ypf-author-desc">擅长固定机位与长时间蹲守，作品节奏舒缓、信息密度高。习惯在同一个地点反复拍摄，用时间差替代旁白，被社区称为「最会等待的作者」。</p>
+          <div class="ypf-author-stats"><span>作品 <b>62</b></span><span>粉丝 <b>4.8万</b></span></div>
+          <button class="ypf-act" type="button" data-ypf-author="路见|城市探索 · 观察型导演|62 件作品，粉丝 4.8 万。擅长固定机位与长时间蹲守，习惯用时间差替代旁白，代表作《站台三分钟》《公园长椅旁的两小时》。">查看档案</button>
+        </article>
+
+        <article class="ypf-card ypf-author">
+          <div class="ypf-author-top">
+            <span class="ypf-avatar" style="background:linear-gradient(135deg,#2f7d6e,#1d4f46);" aria-hidden="true">柘</span>
+            <div><b>@阿柘</b><small>人物访谈 · 情感故事</small></div>
+          </div>
+          <p class="ypf-author-desc">擅长把访谈做得像聊天，镜头克制、问题具体，重视被拍摄者的舒适感。作品多聚焦手艺人、家庭成员与老邻居，善于从细节里找到情感落点。</p>
+          <div class="ypf-author-stats"><span>作品 <b>48</b></span><span>粉丝 <b>3.6万</b></span></div>
+          <button class="ypf-act" type="button" data-ypf-author="阿柘|人物访谈 · 情感故事|48 件作品，粉丝 3.6 万。访谈风格自然克制，代表作《石阶上的修鞋匠》《胶卷里的父亲》，重视拍摄对象的舒适与授权。">查看档案</button>
+        </article>
+
+        <article class="ypf-card ypf-author">
+          <div class="ypf-author-top">
+            <span class="ypf-avatar" style="background:linear-gradient(135deg,#4a6f8a,#2c465a);" aria-hidden="true">半</span>
+            <div><b>@半格镜头</b><small>教程干货 · 实用技巧</small></div>
+          </div>
+          <p class="ypf-author-desc">前商业摄影指导，现专注街拍教学。讲课时喜欢把复杂运镜拆成可执行的小步骤，附赠模板与参数表。其教程被多家影像社群作为入门教材反复引用。</p>
+          <div class="ypf-author-stats"><span>作品 <b>75</b></span><span>粉丝 <b>5.2万</b></span></div>
+          <button class="ypf-act" type="button" data-ypf-author="半格镜头|教程干货 · 实用技巧|75 件作品，粉丝 5.2 万。前商业摄影指导，擅长把运镜与调色拆成可复用步骤，代表作《一镜到底的骑楼》《雨天的快门声》。">查看档案</button>
+        </article>
+
+        <article class="ypf-card ypf-author">
+          <div class="ypf-author-top">
+            <span class="ypf-avatar" style="background:linear-gradient(135deg,#c96f5a,#8d3f2e);" aria-hidden="true">满</span>
+            <div><b>@小满灶台</b><small>生活方式 · 美食烹饪</small></div>
+          </div>
+          <p class="ypf-author-desc">在出租屋的小厨房里拍了三年，坚持一镜一菜、不摆拍不补光。作品里有油烟、有失败、有收拾碗筷的声音，被很多观众当作下饭短片反复观看。</p>
+          <div class="ypf-author-stats"><span>作品 <b>91</b></span><span>粉丝 <b>6.9万</b></span></div>
+          <button class="ypf-act" type="button" data-ypf-author="小满灶台|生活方式 · 美食烹饪|91 件作品，粉丝 6.9 万。三年记录出租屋厨房，坚持一镜一菜、不摆拍，代表作《十平米的厨房》系列，强调真实的家常烟火气。">查看档案</button>
+        </article>
+
+        <article class="ypf-card ypf-author">
+          <div class="ypf-author-top">
+            <span class="ypf-avatar" style="background:linear-gradient(135deg,#8a6fae,#574178);" aria-hidden="true">夜</span>
+            <div><b>@夜里取景</b><small>夜间影像 · 在地文化</small></div>
+          </div>
+          <p class="ypf-author-desc">专注夜间与低光环境拍摄，习惯用环境声构建氛围。作品常以一趟车、一条街、一班船为结构，带着城市在深夜的呼吸感，是本期限定夜行主题的主力作者。</p>
+          <div class="ypf-author-stats"><span>作品 <b>39</b></span><span>粉丝 <b>2.7万</b></span></div>
+          <button class="ypf-act" type="button" data-ypf-author="夜里取景|夜间影像 · 在地文化|39 件作品，粉丝 2.7 万。专注夜间与低光环境，善用环境声构建氛围，代表作《夜班公交沿线》，擅长以路线结构组织影片。">查看档案</button>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- S6 口碑评价 + 榜单 -->
+  <section class="ypf-section ypf-section-alt" id="ypf-reviews" aria-labelledby="ypf-reviews-title">
+    <div class="ypf-wrap">
+      <div class="ypf-sec-head">
+        <h2 id="ypf-reviews-title">社区口碑 · 用户与创作者的评价</h2>
+        <p>来自观众、参与投稿的作者与合作伙伴的真实反馈，评价维度涵盖内容质量、运营效率与社区氛围。</p>
+      </div>
+
+      <div class="ypf-reviews" style="margin-bottom:34px;">
+        <article class="ypf-card ypf-review">
+          <blockquote>「终于有人把街拍拍出了耐心。」</blockquote>
+          <p>我几乎每期都看，印象足拍45期最打动我的是它不急着给结论。一支片子可以只是站着看一条巷子，但看完会想出门走走。</p>
+          <div class="ypf-review-who"><span class="ypf-dot" style="background:#e79a3b;">林</span>林同学 · 观众</div>
+        </article>
+
+        <article class="ypf-card ypf-review">
+          <blockquote>评审反馈比我预想的细。</blockquote>
+          <p>第一次投稿被退回，编辑写了七条具体建议，包括收音和字幕位置。改完再投就上了第 44 期，这种认真的平台值得信赖。</p>
+          <div class="ypf-review-who"><span class="ypf-dot" style="background:#2f7d6e;">周</span>周舟 · 新人创作者</div>
+        </article>
+
+        <article class="ypf-card ypf-review">
+          <blockquote>画面干净，信息不水。</blockquote>
+          <p>作为合作方，我们看中的是它的内容标准。印象足拍45期的影像素材在清晰度和叙事完整度上都很稳定，剪辑沟通也高效。</p>
+          <div class="ypf-review-who"><span class="ypf-dot" style="background:#4a6f8a;">陈</span>陈女士 · 品牌合作方</div>
+        </article>
+
+        <article class="ypf-card ypf-review">
+          <blockquote>短，但很完整。</blockquote>
+          <p>喜欢夜间系列，环境声保留得很好，没有多余配乐。夜班公交那支我看了三遍，第二遍才注意到车厢里的广告灯。</p>
+          <div class="ypf-review-who"><span class="ypf-dot" style="background:#8a6fae;">许</span>许一 · 影像爱好者</div>
+        </article>
+
+        <article class="ypf-card ypf-review">
+          <blockquote>教程真的能跟着做。</blockquote>
+          <p>半格镜头的运镜拆解我照着练了两周，明显稳了。附的参数表和机位图非常实用，比很多付费课讲得清楚。</p>
+          <div class="ypf-review-who"><span class="ypf-dot" style="background:#c96f5a;">吴</span>吴先生 · 摄影社成员</div>
+        </article>
+
+        <article class="ypf-card ypf-review">
+          <blockquote>社区氛围比较舒服。</blockquote>
+          <p>评论区很少互相拉踩，更多是在讨论拍摄地点和光线时间。作为普通观众，我愿意在这种地方多停留一会儿。</p>
+          <div class="ypf-review-who"><span class="ypf-dot" style="background:#7a8f4a;">顾</span>顾南 · 观众</div>
+        </article>
+      </div>
+
+      <h3 class="ypf-h3" style="margin-bottom:12px;">本期热度榜 · 数据截止 11 月 22 日</h3>
+      <ul class="ypf-rank">
+        <li><span class="ypf-rank-no">1</span><span class="ypf-rank-title">《十平米的厨房》<small>@小满灶台 · 生活方式</small></span><span class="ypf-rank-val">21.6万播放</span></li>
+        <li><span class="ypf-rank-no">2</span><span class="ypf-rank-title">《胶卷里的父亲》<small>@阿柘 · 情感故事</small></span><span class="ypf-rank-val">18.9万播放</span></li>
+        <li><span class="ypf-rank-no">3</span><span class="ypf-rank-title">《夜班公交沿线》<small>@夜里取景 · 城市探索</small></span><span class="ypf-rank-val">15.2万播放</span></li>
+        <li><span class="ypf-rank-no">4</span><span class="ypf-rank-title">《站台三分钟》<small>@路见 · 日常记录</small></span><span class="ypf-rank-val">12.4万播放</span></li>
+        <li><span class="ypf-rank-no">5</span><span class="ypf-rank-title">《石阶上的修鞋匠》<small>@阿柘 · 人物访谈</small></span><span class="ypf-rank-val">9.7万播放</span></li>
+        <li><span class="ypf-rank-no">6</span><span class="ypf-rank-title">《雨天的快门声》<small>@半格镜头 · 教程干货</small></span><span class="ypf-rank-val">8.3万播放</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- S7 企业动态 + 合作 + FAQ + 投稿 -->
+  <section class="ypf-section" id="ypf-dynamics" aria-labelledby="ypf-dynamics-title">
+    <div class="ypf-wrap">
+      <div class="ypf-sec-head">
+        <h2 id="ypf-dynamics-title">企业动态 · 官方发布与更新日志</h2>
+        <p>印象足拍45期品牌与社区的近期资讯，包含征稿、功能更新与合作公告。</p>
+      </div>
+
+      <ul class="ypf-updates" style="margin-bottom:40px;">
+        <li>
+          <time datetime="2026-11-22">2026-11-22</time>
+          <div><b>第 45 期正片正式上线</b><span>本期共上线 12 支原创高清短片与 20 余条短片段，专题「傍晚十九点三十七分」同步开放。</span></div>
+        </li>
+        <li>
+          <time datetime="2026-11-18">2026-11-18</time>
+          <div><b>投稿通道升级，支持批量上传</b><span>创作者可一次上传最多 8 个文件，系统自动校验分辨率、画幅与音频电平，并生成投稿预览。</span></div>
+        </li>
+        <li>
+          <time datetime="2026-11-10">2026-11-10</time>
+          <div><b>「我的十平米」专题公开征稿</b><span>面向 18 至 35 岁创作者，征集小空间居住影像，入选作品将进入第 46 期正片。</span></div>
+        </li>
+        <li>
+          <time datetime="2026-10-29">2026-10-29</time>
+          <div><b>与三家在地文化机构达成合作</b><span>合作内容涉及老街区影像档案共建、手艺人访谈联合出品与线下放映活动。</span></div>
+        </li>
+      </ul>
+
+      <h3 class="ypf-h3" style="margin-bottom:12px;">合作品牌与伙伴</h3>
+      <div class="ypf-partners" style="margin-bottom:40px;">
+        <div class="ypf-partner">光影器材社<small>设备支持</small></div>
+        <div class="ypf-partner">老城记忆馆<small>影像档案共建</small></div>
+        <div class="ypf-partner">城市步行计划<small>线下放映合作</small></div>
+        <div class="ypf-partner">小满食研所<small>内容联名</small></div>
+        <div class="ypf-partner">半格学院<small>创作课程合作</small></div>
+      </div>
+
+      <h3 class="ypf-h3" id="ypf-faq" style="margin-bottom:12px;">帮助中心 · 常见问题</h3>
+      <div class="ypf-faq" style="margin-bottom:40px;">
+        <details>
+          <summary>如何向印象足拍45期投稿？</summary>
+          <p>在页面底部的投稿入口填写作者与作品信息，上传不超过 8 个文件，画面分辨率建议 1080P 及以上。提交后 3 个工作日内会收到初筛结果与具体反馈。</p>
+        </details>
+        <details>
+          <summary>投稿对作品时长与画幅有要求吗？</summary>
+          <p>正片建议 3 至 15 分钟，短片段 30 秒至 3 分钟；画幅统一为 16:9 或 2.39:1，同一条作品内请保持一致。竖屏内容仅接受作为短片段补充。</p>
+        </details>
+        <details>
+          <summary>作品被选用后版权归谁？</summary>
+          <p>著作权始终归创作者所有，平台获得授权范围内的展示、推广与专题收录权利。涉及商业合作时，会单独签署授权说明并按约定比例分成。</p>
+        </details>
+        <details>
+          <summary>拍摄陌生人需要注意什么？</summary>
+          <p>请尽量提前沟通并取得同意，近景人物须获得明确授权，未成年人一律不公开。涉及居民生活场景时，请避免长时间围拍与打扰。</p>
+        </details>
+        <details>
+          <summary>新人作者有额外支持吗？</summary>
+          <p>有。新人作品会进入新人榜曝光，编辑会提供一次一对一的技术反馈；优秀新人可申请与签约作者共同完成专题短片。</p>
+        </details>
+        <details>
+          <summary>为什么我的作品没有通过审核？</summary>
+          <p>常见原因包括素材清晰度不足、音频电平异常、字幕遮挡关键画面、缺少人物授权说明或内容方向与当期不匹配。每一条退回都会附上具体建议，可按建议修改后重新投稿。</p>
+        </details>
+        <details>
+          <summary>平台是否提供线下活动？</summary>
+          <p>每季度会举办一次线下放映与创作者见面会，具体时间与报名方式在企业动态中公布，报名名额有限，优先面向已投稿作者。</p>
+        </details>
+      </div>
+
+      <div class="ypf-contact" id="ypf-submit">
+        <div class="ypf-card ypf-contact-card">
+          <h3 class="ypf-h3">投稿与联系 · 期待你的影像</h3>
+          <p>无论你是专业作者还是刚拿起手机的记录者，只要作品真实、清晰、授权完整，都欢迎投递给印象足拍45期。本期征稿截止至 12 月 20 日。</p>
+          <ul class="ypf-contact-list">
+            <li><b>投稿邮箱：</b>submit@yinxft45.example</li>
+            <li><b>合作咨询：</b>partner@yinxft45.example</li>
+            <li><b>工作时间：</b>周一至周五 10:00–19:00</li>
+            <li><b>办公地址：</b>老城区石板街 17 号影像工作室</li>
+          </ul>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;">
+            <button class="ypf-btn ypf-btn-primary" type="button" id="ypf-open-submit">打开投稿表单</button>
+            <button class="ypf-btn ypf-btn-ghost" type="button" data-ypf-share="印象足拍45期 投稿通道">分享投稿通道</button>
+          </div>
+        </div>
+
+        <div class="ypf-card ypf-contact-card">
+          <h3 class="ypf-h3">创作灵感 · 本期命题参考</h3>
+          <p>如果你还没想好拍什么，可以从下面几个方向入手，这些都是本期编辑推荐的可执行选题。</p>
+          <ul class="ypf-contact-list">
+            <li><b>命题一：</b>记录你家附近一条街在清晨六点的样子。</li>
+            <li><b>命题二：</b>找一位仍在用手工方式工作的人，聊十五分钟。</li>
+            <li><b>命题三：</b>用固定机位拍你房间的一角，剪到 90 秒以内。</li>
+            <li><b>命题四：</b>拍一趟你常坐的公交或地铁线路，只保留环境声。</li>
+          </ul>
+          <p>提交时可在作品说明中标注「命题投稿」，编辑会优先查看。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="ypf-footer">
+  <div class="ypf-wrap">
+    <div class="ypf-footer-grid">
+      <div class="ypf-footer-brand">
+        <h3>印象足拍45期</h3>
+        <p>以脚步丈量城市，用镜头记录真实。印象足拍45期官方网站，持续运营的原创影像社区与精品内容平台。</p>
+        <p>官方网站 · 版权所有 · 持续运营中</p>
+      </div>
+      <div>
+        <h3>内容导航</h3>
+        <ul class="ypf-footer-links">
+          <li><a href="#ypf-feature">本期精选</a></li>
+          <li><a href="#ypf-topics">专题企划</a></li>
+          <li><a href="#ypf-authors">创作者矩阵</a></li>
+          <li><a href="#ypf-reviews">社区口碑</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>关于品牌</h3>
+        <ul class="ypf-footer-links">
+          <li><a href="#ypf-explain">品牌深度解析</a></li>
+          <li><a href="#ypf-dynamics">企业动态</a></li>
+          <li><a href="#ypf-faq">帮助中心</a></li>
+          <li><a href="#ypf-submit">投稿与联系</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>社区规范</h3>
+        <ul class="ypf-footer-links">
+          <li>原创与正版声明</li>
+          <li>人物肖像授权说明</li>
+          <li>内容审核流程</li>
+          <li>创作者收益规则</li>
+        </ul>
+      </div>
+    </div>
+    <div class="ypf-footer-bottom">
+      <span>© 2026 印象足拍45期 官方网站 · 保留所有权利</span>
+      <span>备案号：示例备案 20260045 号 · 内容均为原创高清影像</span>
+    </div>
+  </div>
+</footer>
+
+<button class="ypf-backtop" id="ypf-backtop" type="button" aria-label="回到顶部">↑</button>
+<div class="ypf-toast" id="ypf-toast" role="status" aria-live="polite"></div>
+
+<div class="ypf-modal-mask" id="ypf-modal-mask">
+  <div class="ypf-modal" role="dialog" aria-modal="true" aria-labelledby="ypf-modal-title">
+    <button class="ypf-modal-close" id="ypf-modal-close" type="button" aria-label="关闭弹窗">✕</button>
+    <h3 id="ypf-modal-title">提示</h3>
+    <div id="ypf-modal-body"></div>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var ns = "ypf";
+
+  /* ---------- 工具 ---------- */
+  function $(sel, root){ return (root || document).querySelector(sel); }
+  function $all(sel, root){ return Array.prototype.slice.call((root || document).querySelectorAll(sel)); }
+
+  var toastEl = $("#" + ns + "-toast");
+  var toastTimer = null;
+  function showToast(msg){
+    if(!toastEl) return;
+    toastEl.textContent = msg;
+    toastEl.classList.add("is-show");
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toastEl.classList.remove("is-show"); }, 2200);
+  }
+
+  /* ---------- 移动端导航折叠 ---------- */
+  var burger = $("#" + ns + "-burger");
+  var nav = $("#" + ns + "-nav");
+  if(burger && nav){
+    burger.addEventListener("click", function(){
+      var open = nav.classList.toggle("is-open");
+      burger.setAttribute("aria-expanded", open ? "true" : "false");
+      burger.textContent = open ? "✕" : "☰";
+    });
+    $all("a", nav).forEach(function(a){
+      a.addEventListener("click", function(){
+        if(nav.classList.contains("is-open")){
+          nav.classList.remove("is-open");
+          burger.setAttribute("aria-expanded","false");
+          burger.textContent = "☰";
+        }
+      });
+    });
+  }
+
+  /* ---------- 搜索筛选反馈 ---------- */
+  var searchInput = $("#" + ns + "-search-input");
+  var searchBtn = $("#" + ns + "-search-btn");
+  var searchHint = $("#" + ns + "-search-hint");
+  var searchIndex = [
+    {title:"《旧巷十七步》", author:"路见", words:"旧巷 光 城市探索 黄昏"},
+    {title:"《站台三分钟》", author:"路见", words:"站台 通勤 日常记录"},
+    {title:"《石阶上的修鞋匠》", author:"阿柘", words:"手艺人 访谈 人物"},
+    {title:"《夜班公交沿线》", author:"夜里取景", words:"夜班 公交 夜间 城市"},
+    {title:"《十平米的厨房》", author:"小满灶台", words:"厨房 美食 生活方式"},
+    {title:"《一镜到底的骑楼》", author:"半格镜头", words:"运镜 教程 技巧 骑楼"},
+    {title:"《胶卷里的父亲》", author:"阿柘", words:"胶卷 家庭 情感 修复"},
+    {title:"《公园长椅旁的两小时》", author:"路见", words:"公园 长椅 治愈 观察"},
+    {title:"《雨天的快门声》", author:"半格镜头", words:"雨天 街拍 教程"},
+    {title:"专题：傍晚十九点三十七分", author:"官方企划", words:"专题 黄昏 城市"},
+    {title:"专题：手上还有活的手艺人", author:"官方企划", words:"专题 手艺 匠人"},
+    {title:"专题：我的十平米", author:"官方企划", words:"专题 居住 小空间"}
+  ];
+  function doSearch(){
+    if(!searchInput || !searchHint) return;
+    var q = searchInput.value.trim();
+    if(!q){
+      searchHint.textContent = "请输入内容名称、作者或题材关键词，例如「夜班」「厨房」「教程」。";
+      return;
+    }
+    var hits = searchIndex.filter(function(item){
+      var hay = (item.title + " " + item.author + " " + item.words).toLowerCase();
+      return hay.indexOf(q.toLowerCase()) !== -1;
+    });
+    if(hits.length){
+      var names = hits.slice(0,3).map(function(h){ return h.title; }).join("、");
+      searchHint.textContent = "找到 " + hits.length + " 条相关内容：" + names + (hits.length > 3 ? " 等。" : "。");
+    }else{
+      searchHint.textContent = "暂未找到「" + q + "」的匹配内容，试试「夜班」「厨房」「专题」等关键词。";
+    }
+  }
+  if(searchBtn){
+    searchBtn.addEventListener("click", doSearch);
+  }
+  if(searchInput){
+    searchInput.addEventListener("keydown", function(e){
+      if(e.key === "Enter"){ e.preventDefault(); doSearch(); }
+    });
+    searchInput.addEventListener("input", function(){
+      if(searchHint && searchInput.value.trim() === ""){ searchHint.textContent = ""; }
+    });
+  }
+
+  /* ---------- 点赞 / 收藏 ---------- */
+  $all("[data-ypf-like]").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      var on = btn.classList.toggle("is-on");
+      btn.textContent = on ? "已赞" : "点赞";
+      showToast(on ? "已为这条内容点赞 +1" : "已取消点赞 -1");
+    });
+  });
+  $all("[data-ypf-fav]").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      var on = btn.classList.toggle("is-on");
+      btn.textContent = on ? "已收藏" : "收藏";
+      showToast(on ? "已加入收藏夹" : "已取消收藏");
+    });
+  });
+
+  /* ---------- 弹窗通用 ---------- */
+  var mask = $("#" + ns + "-modal-mask");
+  var modalTitle = $("#" + ns + "-modal-title");
+  var modalBody = $("#" + ns + "-modal-body");
+  var modalClose = $("#" + ns + "-modal-close");
+  function openModal(title, html){
+    if(!mask) return;
+    modalTitle.textContent = title;
+    modalBody.innerHTML = html;
+    mask.classList.add("is-open");
+    document.body.style.overflow = "hidden";
+    if(modalClose) modalClose.focus();
+  }
+  function closeModal(){
+    if(!mask) return;
+    mask.classList.remove("is-open");
+    document.body.style.overflow = "";
+  }
+  if(modalClose){ modalClose.addEventListener("click", closeModal); }
+  if(mask){
+    mask.addEventListener("click", function(e){
+      if(e.target === mask){ closeModal(); }
+    });
+  }
+  document.addEventListener("keydown", function(e){
+    if(e.key === "Escape"){ closeModal(); }
+  });
+
+  /* ---------- 作者信息弹窗 ---------- */
+  $all("[data-ypf-author]").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      var parts = btn.getAttribute("data-ypf-author").split("|");
+      var name = parts[0] || "创作者";
+      var field = parts[1] || "影像创作";
+      var desc = parts[2] || "";
+      var html = "" +
+        "<p><strong>擅长领域：</strong>" + field + "</p>" +
+        "<p>" + desc + "</p>" +
+        "<p style=\"font-size:.84rem;color:#7d8a86;\">该创作者的作品均为印象足拍45期官方授权发布，转载请注明出处。</p>" +
+        "<button class=\"ypf-btn ypf-btn-primary\" type=\"button\" data-ypf-close>我知道了</button>";
+      openModal(name + " · 创作者档案", html);
+    });
+  });
+
+  /* ---------- 投稿弹窗 ---------- */
+  var openSubmit = $("#" + ns + "-open-submit");
+  if(openSubmit){
+    openSubmit.addEventListener("click", function(){
+      var html = "" +
+        "<p>请填写基本信息，编辑会在 3 个工作日内回复。带 * 为必填项。</p>" +
+        "<label for=\"ypf-form-name\">作者昵称 *</label>" +
+        "<input id=\"ypf-form-name\" type=\"text\" placeholder=\"例如：路见\">" +
+        "<label for=\"ypf-form-title\">作品标题 *</label>" +
+        "<input id=\"ypf-form-title\" type=\"text\" placeholder=\"例如：旧巷十七步\">" +
+        "<label for=\"ypf-form-topic\">投稿方向</label>" +
+        "<select id=\"ypf-form-topic\">" +
+          "<option>城市探索</option><option>日常记录</option><option>人物访谈</option>" +
+          "<option>教程干货</option><option>生活方式</option><option>治愈影像</option>" +
+        "</select>" +
+        "<label for=\"ypf-form-desc\">作品说明</label>" +
+        "<textarea id=\"ypf-form-desc\" placeholder=\"简述拍摄地点、时间与创作想法，并说明人物授权情况\"></textarea>" +
+        "<button class=\"ypf-btn ypf-btn-primary\" type=\"button\" id=\"ypf-form-send\">提交投稿</button>";
+      openModal("投稿表单 · 印象足拍45期", html);
+    });
+  }
+  document.addEventListener("click", function(e){
+    var t = e.target;
+    if(t && t.id === "ypf-form-send"){
+      var nameInput = $("#ypf-form-name");
+      var titleInput = $("#ypf-form-title");
+      if(nameInput && titleInput && (!nameInput.value.trim() || !titleInput.value.trim())){
+        showToast("请先填写作者昵称与作品标题");
+        return;
+      }
+      closeModal();
+      showToast("投稿已提交，编辑将在 3 个工作日内回复");
+    }
+    if(t && t.hasAttribute && t.hasAttribute("data-ypf-close")){
+      closeModal();
+    }
+  });
+
+  /* ---------- 分享 ---------- */
+  function copyText(text){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(text).then(function(){
+        showToast("页面信息已复制，可粘贴分享给好友");
+      }).catch(function(){
+        showToast("复制失败，请手动复制页面标题");
+      });
+      return;
+    }
+    var input = document.createElement("textarea");
+    input.value = text;
+    input.setAttribute("readonly","");
+    input.style.position = "fixed";
+    input.style.left = "-9999px";
+    document.body.appendChild(input);
+    input.select();
+    try{
+      document.execCommand("copy");
+      showToast("页面信息已复制，可粘贴分享给好友");
+    }catch(err){
+      showToast("复制失败，请手动复制页面标题");
+    }
+    document.body.removeChild(input);
+  }
+  $all("[data-ypf-share]").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      var text = btn.getAttribute("data-ypf-share") || document.title;
+      copyText(text + " — 官方网站");
+    });
+  });
+
+  /* ---------- 回到顶部 ---------- */
+  var backtop = $("#" + ns + "-backtop");
+  function onScroll(){
+    if(!backtop) return;
+    if(window.scrollY > 520){ backtop.classList.add("is-show"); }
+    else{ backtop.classList.remove("is-show"); }
+  }
+  if(backtop){
+    backtop.addEventListener("click", function(){
+      window.scrollTo({top:0, behavior:"smooth"});
+    });
+  }
+  window.addEventListener("scroll", onScroll, {passive:true});
+  onScroll();
+
+  /* ---------- 数据数字滚动 ---------- */
+  var counters = $all("[data-ypf-count]");
+  var counted = false;
+  function runCounters(){
+    if(counted || !counters.length) return;
+    counted = true;
+    counters.forEach(function(el){
+      var target = parseInt(el.getAttribute("data-ypf-count"), 10) || 0;
+      var suffix = el.textContent.replace(/[0-9]/g, "");
+      var start = null;
+      var dur = 1100;
+      function step(ts){
+        if(!start){ start = ts; }
+        var p = Math.min((ts - start) / dur, 1);
+        var eased = 1 - Math.pow(1 - p, 3);
+        var val = Math.round(target * eased);
+        el.textContent = val + suffix;
+        if(p < 1){ requestAnimationFrame(step); }
+        else{ el.textContent = target + suffix; }
+      }
+      requestAnimationFrame(step);
+    });
+  }
+  if("IntersectionObserver" in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){ runCounters(); io.disconnect(); }
+      });
+    }, {threshold:0.4});
+    var heroStats = $(".ypf-hero-stats");
+    if(heroStats){ io.observe(heroStats); } else { runCounters(); }
+  }else{
+    runCounters();
+  }
+
+  /* ---------- 锚点平滑偏移（吸顶公告+页头高度） ---------- */
+  var stick = $(".ypf-sticktop");
+  function offsetHeight(){
+    return stick ? stick.getBoundingClientRect().height : 0;
+  }
+  $all('a[href^="#"]').forEach(function(link){
+    link.addEventListener("click", function(e){
+      var href = link.getAttribute("href");
+      if(!href || href === "#") return;
+      var target = document.querySelector(href);
+      if(!target) return;
+      e.preventDefault();
+      var top = target.getBoundingClientRect().top + window.scrollY - offsetHeight() - 14;
+      window.scrollTo({top: Math.max(top, 0), behavior:"smooth"});
+    });
+  });
+})();
+</script>
+</body>
+                                      </html>
